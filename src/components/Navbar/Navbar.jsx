@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <NavLink to="/exerciseSearch" className="link">
-        <img src="../../../public/img/logo.png" alt="" />
+        <img src="/img/logo.png" alt="" />
       </NavLink>
       {localStorage.getItem("user") && (
         <>
