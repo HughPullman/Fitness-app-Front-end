@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const loginService = async ({ email, password }) => {
     try {
-        const loginRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+        const loginRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/login`, {
             email,
             password
         });
@@ -14,7 +14,7 @@ export const loginService = async ({ email, password }) => {
 
 export const registerService = async ({ email, password }) => {
     try {
-        const registerRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/register`, {
+        const registerRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/register`, {
             email,
             password
         });
@@ -29,7 +29,7 @@ export const createExerciseService = async ({ exercise}) => {
     const userId = localStorage.getItem("user");
 
     try {
-        const createExerciseRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/createExercise`, {
+        const createExerciseRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/createExercise`, {
             exercise,
             userId,
             headers: {
@@ -48,7 +48,7 @@ export const getExercisesService = async () => {
     const userId = localStorage.getItem("user");
 
     try {
-        const getExercisesRes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/getExercises/${userId}`, {
+        const getExercisesRes = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/getExercises/${userId}`, {
             headers: {
                 "access-token": accessToken,
             }
@@ -64,7 +64,7 @@ export const deleteExerciseService = async ({exercise}) => {
     const userId = localStorage.getItem("user");
 
     try {
-        const deleteExerciseRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/deleteExercise`, {
+        const deleteExerciseRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/deleteExercise`, {
             exercise: exercise,
             userId,
             headers: {
@@ -83,7 +83,7 @@ export const createWorkoutService = async ({ workout }) => {
     const userId = localStorage.getItem("user");
 
     try {
-        const createWorkoutRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/createWorkout`, {
+        const createWorkoutRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/createWorkout`, {
             workout,
             userId,
             headers: {
@@ -102,7 +102,7 @@ export const getWorkoutsService = async () => {
     const userId = localStorage.getItem("user");
 
     try {
-        const getWorkoutRes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/getWorkouts/${userId}`, {
+        const getWorkoutRes = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/getWorkouts/${userId}`, {
             headers: {
                 "access-token": accessToken,
             }
@@ -119,7 +119,7 @@ export const deleteWorkoutService = async (workout) => {
 
 
     try {
-        const deleteWorkoutRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/deleteWorkout`, {
+        const deleteWorkoutRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/deleteWorkout`, {
             workout,
             userId,
             headers: {
@@ -137,7 +137,7 @@ export const editWorkoutService = async (workout, oldWorkoutName) => {
     const userId = localStorage.getItem("user");
 
     try {
-        const editWorkoutRes = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/editWorkout`, {
+        const editWorkoutRes = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}/editWorkout`, {
             workout,
             userId,
             oldWorkoutName,

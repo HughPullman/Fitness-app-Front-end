@@ -43,7 +43,7 @@ describe("User service tests", () => {
         
         const loginRes = await loginService(mockUser);
         
-        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/login`, mockUser);
+        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/login`, mockUser);
         expect(loginRes).toEqual({data: "TestData"})
     });
 
@@ -54,7 +54,7 @@ describe("User service tests", () => {
         
         const registerRes = await registerService(mockUser);
         
-        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/register`, mockUser);
+        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/register`, mockUser);
         expect(registerRes).toEqual({data: "TestData"})
     });
 
@@ -68,7 +68,7 @@ describe("User service tests", () => {
         
         const createExerciseRes = await createExerciseService({exercise: mockExercise});
         
-        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/createExercise`, {
+        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/createExercise`, {
             exercise: mockExercise, userId: "TestUser" , headers: {
              "access-token": "TestToken"
             }
@@ -83,7 +83,7 @@ describe("User service tests", () => {
 
         const getExerciseServiceRes = await getExercisesService();
 
-        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/getExercises/TestUser`, {
+        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/getExercises/TestUser`, {
             headers: {
              "access-token": "TestToken"
             }
@@ -98,7 +98,7 @@ describe("User service tests", () => {
 
         const deleteExerciseRes = await deleteExerciseService({ exercise: mockExercise });
 
-        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/deleteExercise`, {
+        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/deleteExercise`, {
             exercise: mockExercise, userId: "TestUser" , headers: {
              "access-token": "TestToken"
             }
@@ -113,7 +113,7 @@ describe("User service tests", () => {
         
         const createWorkoutRes = await createWorkoutService({ workout: mockWorkout });
 
-        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/createWorkout`, {
+        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/createWorkout`, {
             workout: mockWorkout, userId: "TestUser" , headers: {
              "access-token": "TestToken"
             }
@@ -128,7 +128,7 @@ describe("User service tests", () => {
 
         const getWorkoutRes = await getWorkoutsService();
 
-        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/getWorkouts/TestUser`, {
+        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/getWorkouts/TestUser`, {
             headers: {
              "access-token": "TestToken"
             }
@@ -143,7 +143,7 @@ describe("User service tests", () => {
         
         const deleteWorkoutRes = await deleteWorkoutService(mockWorkout);
 
-        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/deleteWorkout`, {
+        expect(axios.post).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/deleteWorkout`, {
             workout: mockWorkout, userId: "TestUser" , headers: {
              "access-token": "TestToken"
             }
@@ -159,7 +159,7 @@ describe("User service tests", () => {
         
         const editWorkoutRes = await editWorkoutService(mockWorkout, mockWorkout.name);
 
-        expect(axios.put).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/editWorkout`, {
+        expect(axios.put).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/editWorkout`, {
             workout: mockWorkout, userId: "TestUser", oldWorkoutName: "TestName" , headers: {
              "access-token": "TestToken"
             }

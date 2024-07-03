@@ -21,7 +21,7 @@ describe("Find exercise tests", () => {
 
         const findExercisesRes = await findExercises({searchValue: mockValue, selectedType: mockType,selectedMuscle: mockMuscle,selectedDifficulty: mockDifficulty});
 
-        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/exerciseSearch`,
+        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/exerciseSearch`,
             { params: {
                 searchValue: mockValue,
                 selectedType: mockType,
@@ -40,7 +40,7 @@ describe("Find exercise tests", () => {
 
         const findExercisesRes = await findExercises({searchValue: mockValue, selectedType: mockType,selectedMuscle: mockMuscle,selectedDifficulty: mockDifficulty});
 
-        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_BACKEND_URL}/exerciseSearch`,
+        expect(axios.get).toHaveBeenCalledWith(`${import.meta.env.VITE_APP_BACKEND_URL}/exerciseSearch`,
         { params: {
             searchValue: mockValue,
             selectedType: mockType,

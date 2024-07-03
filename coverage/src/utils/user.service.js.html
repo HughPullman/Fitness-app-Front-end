@@ -1,68 +1,64 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Code coverage report for src/utils/user.service.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type='text/css'>
-        .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
-        }
+    <style type="text/css">
+      .coverage-summary .sorter {
+        background-image: url(../../sort-arrow-sprite.png);
+      }
     </style>
-</head>
-    
-<body>
-<div class='wrapper'>
-    <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/utils</a> user.service.js</h1>
-        <div class='clearfix'>
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">84.74% </span>
-                <span class="quiet">Statements</span>
-                <span class='fraction'>50/59</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>9/9</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">84.74% </span>
-                <span class="quiet">Lines</span>
-                <span class='fraction'>50/59</span>
-            </div>
-        
-            
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="pad1">
+        <h1>
+          <a href="../../index.html">All files</a> /
+          <a href="index.html">src/utils</a> user.service.js
+        </h1>
+        <div class="clearfix">
+          <div class="fl pad1y space-right2">
+            <span class="strong">84.74% </span>
+            <span class="quiet">Statements</span>
+            <span class="fraction">50/59</span>
+          </div>
+
+          <div class="fl pad1y space-right2">
+            <span class="strong">100% </span>
+            <span class="quiet">Branches</span>
+            <span class="fraction">0/0</span>
+          </div>
+
+          <div class="fl pad1y space-right2">
+            <span class="strong">100% </span>
+            <span class="quiet">Functions</span>
+            <span class="fraction">9/9</span>
+          </div>
+
+          <div class="fl pad1y space-right2">
+            <span class="strong">84.74% </span>
+            <span class="quiet">Lines</span>
+            <span class="fraction">50/59</span>
+          </div>
         </div>
         <p class="quiet">
-            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+          Press <em>n</em> or <em>j</em> to go to the next uncovered block,
+          <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
         <template id="filterTemplate">
-            <div class="quiet">
-                Filter:
-                <input type="search" id="fileSearch">
-            </div>
+          <div class="quiet">
+            Filter:
+            <input type="search" id="fileSearch" />
+          </div>
         </template>
-    </div>
-    <div class='status-line high'></div>
-    <pre><table class="coverage">
+      </div>
+      <div class="status-line high"></div>
+      <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -369,7 +365,7 @@
 &nbsp;
 export const loginService = async ({ email, password }) =&gt; {
     try {
-        const loginRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+        const loginRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/login`, {
             email,
             password
         });
@@ -381,7 +377,7 @@ export const loginService = async ({ email, password }) =&gt; {
 &nbsp;
 export const registerService = async ({ email, password }) =&gt; {
     try {
-        const registerRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/register`, {
+        const registerRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/register`, {
             email,
             password
         });
@@ -396,7 +392,7 @@ export const createExerciseService = async ({ exercise}) =&gt; {
     const userId = localStorage.getItem("user");
 &nbsp;
     try {
-        const createExerciseRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/createExercise`, {
+        const createExerciseRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/createExercise`, {
             exercise,
             userId,
             headers: {
@@ -415,7 +411,7 @@ export const getExercisesService = async () =&gt; {
     const userId = localStorage.getItem("user");
 &nbsp;
     try {
-        const getExercisesRes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/getExercises/${userId}`, {
+        const getExercisesRes = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/getExercises/${userId}`, {
             headers: {
                 "access-token": accessToken,
             }
@@ -431,7 +427,7 @@ export const deleteExerciseService = async ({exercise}) =&gt; {
     const userId = localStorage.getItem("user");
 &nbsp;
     try {
-        const deleteExerciseRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/deleteExercise`, {
+        const deleteExerciseRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/deleteExercise`, {
             exercise: exercise,
             userId,
             headers: {
@@ -450,7 +446,7 @@ export const createWorkoutService = async ({ workout }) =&gt; {
     const userId = localStorage.getItem("user");
 &nbsp;
     try {
-        const createWorkoutRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/createWorkout`, {
+        const createWorkoutRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/createWorkout`, {
             workout,
             userId,
             headers: {
@@ -469,7 +465,7 @@ export const getWorkoutsService = async () =&gt; {
     const userId = localStorage.getItem("user");
 &nbsp;
     try {
-        const getWorkoutRes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/getWorkouts/${userId}`, {
+        const getWorkoutRes = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/getWorkouts/${userId}`, {
             headers: {
                 "access-token": accessToken,
             }
@@ -486,7 +482,7 @@ export const deleteWorkoutService = async (workout) =&gt; {
 &nbsp;
 &nbsp;
     try {
-        const deleteWorkoutRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/deleteWorkout`, {
+        const deleteWorkoutRes = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/deleteWorkout`, {
             workout,
             userId,
             headers: {
@@ -504,7 +500,7 @@ export const editWorkoutService = async (workout, oldWorkoutName) =&gt; {
     const userId = localStorage.getItem("user");
 &nbsp;
     try {
-        const editWorkoutRes = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/editWorkout`, {
+        const editWorkoutRes = await axios.put(`${import.meta.env.VITE_APP_BACKEND_URL}/editWorkout`, {
             workout,
             userId,
             oldWorkoutName,
@@ -518,21 +514,27 @@ export const editWorkoutService = async (workout, oldWorkoutName) =&gt; {
     }
 }</pre></td></tr></table></pre>
 
-                <div class='push'></div><!-- for sticky footer -->
-            </div><!-- /wrapper -->
-            <div class='footer quiet pad2 space-top1 center small'>
-                Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-07-02T16:38:28.119Z
-            </div>
-        <script src="../../prettify.js"></script>
-        <script>
-            window.onload = function () {
-                prettyPrint();
-            };
-        </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
-    </body>
+      <div class="push"></div>
+      <!-- for sticky footer -->
+    </div>
+    <!-- /wrapper -->
+    <div class="footer quiet pad2 space-top1 center small">
+      Code coverage generated by
+      <a
+        href="https://istanbul.js.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >istanbul</a
+      >
+      at 2024-07-02T16:38:28.119Z
+    </div>
+    <script src="../../prettify.js"></script>
+    <script>
+      window.onload = function () {
+        prettyPrint();
+      };
+    </script>
+    <script src="../../sorter.js"></script>
+    <script src="../../block-navigation.js"></script>
+  </body>
 </html>
-    
