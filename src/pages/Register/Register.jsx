@@ -22,7 +22,7 @@ const Register = () => {
         setModalMessage(`Successfully created account with email: ${res.data}`);
       } else {
         setErrorModal(true);
-        setModalMessage(res.response.data);
+        setModalMessage(res.response.data.error);
       }
     } catch (e) {
       console.log(e);
