@@ -47,9 +47,13 @@ const Exercises = ({ exerciseRes }) => {
         <td key={exercise.name + "6"}>
           <button onClick={() => handleInfo(exercise)}>More Info</button>
         </td>
-        <td>
-          <button onClick={() => handleSave(exercise)}>Save Exercise</button>
-        </td>
+        {localStorage.getItem("user") ? (
+          <td>
+            <button onClick={() => handleSave(exercise)}>Save Exercise</button>
+          </td>
+        ) : (
+          <td></td>
+        )}
       </tr>
     ));
     setExercises(chosenExercises);
