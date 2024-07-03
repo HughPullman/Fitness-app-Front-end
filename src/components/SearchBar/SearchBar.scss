@@ -1,0 +1,58 @@
+.searchbar{
+    form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+            align-items: center;
+            border-radius: 15px;
+            background: rgb(33, 33, 33);
+            background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(33, 33, 33, 1) 27%, rgba(0, 0, 0, 1) 100%);
+            border: solid 3px rgb(0, 0, 0);
+            overflow: hidden;
+    
+            input {
+                height: 50px;
+                width: 25vw;
+                border: none;
+                background-color: #525151;
+                color: #ffffff;
+                padding: 0 10px;
+                font-size: 18px;
+                border-radius: 8px;
+            }
+    
+            input::placeholder {
+                color: #e2e2e2;
+            }
+    
+            button {
+                height: 50px;
+                background-color: rgba(179, 77, 10, 1);
+                color: #e2e2e2;
+                cursor: pointer;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+            }
+    
+            button:hover {
+                background-color: rgb(128, 54, 5);
+            }
+            
+            select {
+                border-radius: 8px;
+                height: 50px;
+                width: 25vw;
+                border: none;
+                background-color: #525151;
+                color: #ffffff;
+                padding: 0 10px;
+                font-size: 18px;
+            }
+        }
+
+        
+}

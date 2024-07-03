@@ -1,0 +1,37 @@
+.exerciseCard{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    background: rgb(33, 33, 33);
+    background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(33, 33, 33, 1) 27%, rgba(0, 0, 0, 1) 100%);
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+
+
+    .leftExerciseCard{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rightExerciseCard{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        button {
+                height: 35px;
+                width: 60px;
+                border-radius: 8px;
+                background-color: rgba(179, 77, 10, 1);
+                color: #e2e2e2;
+                cursor: pointer;
+                padding: 10px;
+                border: none;
+                float: right;
+            }
+    }
+}

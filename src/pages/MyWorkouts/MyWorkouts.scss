@@ -1,0 +1,12 @@
+.myWorkouts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    min-height: calc(92vh - 10px);
+    margin: 0 10vw;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8vh;
+    padding-bottom: 50px;
+}

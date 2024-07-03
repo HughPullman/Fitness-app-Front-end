@@ -1,0 +1,15 @@
+.home{
+    min-height: calc(92vh - 10px);
+    padding: 0 16vw;
+    padding-top: 8vh;
+    padding-bottom: 50px;
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+}

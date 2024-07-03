@@ -1,0 +1,53 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 90px;
+    width: 80vw;
+    font-weight: 600;
+    font-size: 20px;
+    background: rgb(33, 33, 33);
+    background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(33, 33, 33, 1) 27%, rgba(0, 0, 0, 1) 100%);
+    color: #e2e2e2;
+    border-radius: 10px;
+    position: sticky;
+    top: 40px;
+    left: 9vw;
+    gap: 20px;
+    
+    img{
+        height: 60px;
+        border-radius: 10px
+    }
+
+    .link{
+        text-decoration: none;
+    }
+
+    span{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+    }
+
+    span::after {
+       content: '';
+       width: 0;
+       height: 3px;
+       background-color: rgba(179, 77, 10, 1);
+       position: absolute;
+       border-radius: 3px;
+       left: 0;
+       bottom: -6px;
+       transition: 0.5s;
+   }
+
+    span:hover::after {
+       width: 100%;
+   }
+}

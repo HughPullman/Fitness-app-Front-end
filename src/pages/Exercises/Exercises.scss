@@ -1,0 +1,68 @@
+.exercises{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(92vh - 10px);
+    padding-top: 8vh;
+    padding-bottom: 50px;
+    margin: 0 10vw;
+    color: #e2e2e2;
+    gap: 50px;
+
+    h2{
+        font-size: 28px;
+    }
+
+    table{
+        border-collapse: collapse;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        overflow: hidden;
+
+        thead{
+            tr{
+                background: rgb(33, 33, 33);
+                background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(33, 33, 33, 1) 27%, rgba(0, 0, 0, 1) 100%);
+                text-align: left;
+
+                th{
+                    padding: 12px 15px;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+                border-bottom: 2px solid rgb(33, 33, 33);
+                
+                td{
+                    padding: 8px 15px;
+
+                    button {
+                        height: 30px;
+                        border-radius: 8px;
+                        background-color: rgba(179, 77, 10, 1);
+                        color: #e2e2e2;
+                        cursor: pointer;
+                        border: 1px solid rgb(33, 33, 33);
+                    }
+                    button:hover {
+                        background-color: rgb(128, 54, 5);
+                    }
+                }
+                td:last-of-type{
+                    text-align: right;
+                }
+            }
+            tr:nth-of-type(even){
+                background-color: rgb(33, 33, 33);
+            }
+            tr:nth-of-type(odd) {
+                background-color: rgba(179, 77, 10, 0.4);
+            }
+            tr:last-of-type{
+                border-bottom: 3px solid rgba(179, 77, 10, 1);
+            }
+        }
+    }
+}

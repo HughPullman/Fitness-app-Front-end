@@ -1,0 +1,30 @@
+.workoutCard{
+    display: flex;
+    flex-direction: column;
+    background: rgb(33, 33, 33);
+    background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(33, 33, 33, 1) 27%, rgba(0, 0, 0, 1) 100%);
+    color: #e2e2e2;
+    padding: 20px;
+    border-radius: 15px;
+    height: 250px;
+    width: 250px;
+    justify-content: space-between;
+
+    h3{
+        font-size: 20px;
+    }
+
+    p{
+        opacity: 0.8;
+    }
+    
+    button {
+        height: 35px;
+        border-radius: 8px;
+        background-color: rgba(179, 77, 10, 1);
+        color: #e2e2e2;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+    }
+}
