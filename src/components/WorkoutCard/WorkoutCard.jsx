@@ -10,7 +10,7 @@ const WorkoutCard = ({ exercise, setInfo, setChosenExercise }) => {
     <div className="workoutCard">
       <h3>{exercise.name}</h3>
       <p>{exercise.difficulty}</p>
-      <p>{exercise.equipment}</p>
+      <p>{exercise.equipment.replace("_", " ")}</p>
       <button onClick={() => handleInfo()}>More Info</button>
     </div>
   );

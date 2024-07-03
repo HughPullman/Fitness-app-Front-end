@@ -5,9 +5,9 @@ const ExerciseCard = ({ chosenExercise, setInfo }) => {
     <div className="exerciseCard">
       <div className="leftExerciseCard">
         <h3>{chosenExercise.name}</h3>
-        <p>Type: {chosenExercise.type}</p>
-        <p>Muscle: {chosenExercise.muscle}</p>
-        <p>Equipment: {chosenExercise.equipment}</p>
+        <p>Type: {chosenExercise.type.replace("_", " ")}</p>
+        <p>Muscle: {chosenExercise.muscle.replace("_", " ")}</p>
+        <p>Equipment: {chosenExercise.equipment.replace("_", " ")}</p>
         <p>Difficulty: {chosenExercise.difficulty}</p>
       </div>
       <div className="rightExerciseCard">

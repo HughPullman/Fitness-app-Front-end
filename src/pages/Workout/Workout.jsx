@@ -66,7 +66,7 @@ const Workout = ({ myWorkout, handleEdit }) => {
       />
       <div className="title">
         <h3>{myWorkout.name}</h3>
-        <h5>{myWorkout.description}</h5>
+        <h5>{myWorkout.description.replace("_", " ")}</h5>
         <div className="btns">
           <button onClick={() => handleDelete()}>Delete workout</button>
           <button onClick={() => handleEdit()}>Edit workout</button>

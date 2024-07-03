@@ -40,9 +40,11 @@ const Exercises = ({ exerciseRes }) => {
     const chosenExercises = exerciseRes.map((exercise) => (
       <tr key={exercise.name}>
         <td key={exercise.name + "1"}>{exercise.name}</td>
-        <td key={exercise.name + "2"}>{exercise.type}</td>
-        <td key={exercise.name + "3"}>{exercise.muscle}</td>
-        <td key={exercise.name + "4"}>{exercise.equipment}</td>
+        <td key={exercise.name + "2"}>{exercise.type.replace("_", " ")}</td>
+        <td key={exercise.name + "3"}>{exercise.muscle.replace("_", " ")}</td>
+        <td key={exercise.name + "4"}>
+          {exercise.equipment.replace("_", " ")}
+        </td>
         <td key={exercise.name + "5"}>{exercise.difficulty}</td>
         <td key={exercise.name + "6"}>
           <button onClick={() => handleInfo(exercise)}>More Info</button>
