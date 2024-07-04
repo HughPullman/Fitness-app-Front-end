@@ -52,6 +52,8 @@ describe("Exercises page tests", () => {
       status: 201,
     });
 
+    localStorage.setItem("user", "TestUser");
+
     renderScreen([
       {
         name: "TestName",
@@ -83,6 +85,7 @@ describe("Exercises page tests", () => {
     createExerciseService.mockReturnValue({
       status: 201,
     });
+    localStorage.setItem("user", "TestUser");
 
     renderScreen([
       {
@@ -114,6 +117,7 @@ describe("Exercises page tests", () => {
         },
       },
     });
+    localStorage.setItem("user", "TestUser");
 
     renderScreen([
       {
@@ -140,6 +144,8 @@ describe("Exercises page tests", () => {
     createExerciseService.mockReturnValue({
       status: 201,
     });
+
+    localStorage.setItem("user", "TestUser");
 
     renderScreen([
       {

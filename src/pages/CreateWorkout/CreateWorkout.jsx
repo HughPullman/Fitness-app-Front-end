@@ -155,7 +155,7 @@ const CreateWorkout = ({ editWorkout, setEditWorkout }) => {
               </div>
               {editMode ? (
                 <button type="submit" role="submit">
-                  Edit
+                  Save
                 </button>
               ) : (
                 <button type="submit" role="submit">

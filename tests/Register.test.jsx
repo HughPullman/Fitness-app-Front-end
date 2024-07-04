@@ -55,7 +55,9 @@ describe("Register page tests", () => {
     registerService.mockReturnValue({
       status: 400,
       response: {
-        data: "TestError",
+        data: {
+          error: "TestError",
+        },
       },
     });
 
@@ -72,7 +74,9 @@ describe("Register page tests", () => {
     registerService.mockReturnValue({
       status: 400,
       response: {
-        data: "TestError",
+        data: {
+          error: "TestError",
+        },
       },
     });
 
